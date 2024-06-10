@@ -5,9 +5,139 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h2{
+  margin: 0;
+  margin-top: 5px;
+  font-size: 6vmin;
+  color:#1c6a95;
+}
+
+.field {
+  gap: 3px;
+  width: 60vmin;
+  height:60vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: gray;
+  padding: 3vmin;
+  border-radius: 5vmin;
+}
+
+.quadrant{
+  gap: 1vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #cecece;
+  padding: 1vmin;
+  border-radius: 2vmin;
+}
+
+.tile{
+  border-radius: 1vmin;
+  font-size: 3vmin;
+  background: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.blank{
+  cursor: pointer;
+}
+
+.numbers{
+  display: flex;
+  justify-content: space-between;
+  padding: 3vmin;
+  font-size: 6vmin;
+  color: #1c6a95;
+  user-select: none;
+}
+
+.number{
+  cursor: pointer;
+}
+
+.selected{
+  border: 1px solid #1c6a95;
+}
+
+.error-message{
+  width:100vw;
+  height: 100vh;
+  top:0;
+  left:0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-over{
+  display: flex;
+  padding: 5vw;
+  color: #1c6a95;
+  font-weight: 700;
+  background-color: white;
+  gap:2vw;
+  flex-direction: column;
+}
+
+.difficulty{
+  width:100%;
+  display: flex;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 600;
+}
+
+#root .solution{
+  background-color: rgb(46, 46, 124);
+}
+
+.solution .tile{
+  border-radius: 1vmin;
+  font-size: 3vmin;
+  background: rgb(16, 135, 190);
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.solution .quadrant{
+  gap: 1vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: rgb(46, 46, 124);
+  padding: 1vmin;
+  border-radius: 2vmin;
+}
+
+.buttonBlock{
+  display: flex;
+  gap: 1vw;
+}
+
+.buttonBlock button{
+  display: flex;
+  align-items: center;
+  padding: 1vw;
+  justify-content: center;
 }
