@@ -7,6 +7,7 @@ const SudokuGame = () => {
   const [difficulty, setDifficulty] = useState(30);
   const [hasError, setHasError] = useState(false);
   const [showSolution, setShowSolution] = useState(false);
+  const [gameWin, setGameWin] = useState(false)
 
   //генерация и рестарт
 
@@ -80,6 +81,7 @@ const SudokuGame = () => {
 
   const checkWin = () => {
     if (isSudokuFilled(sudokuField.table) && !hasErrors(sudokuField.table)) {
+      setGameWin(true);
       alert("Congratulations! You've won the game!");
       handleRestart();
     }
@@ -140,7 +142,7 @@ const SudokuGame = () => {
                       selectedCell.col === colIndex
                         ? "selected"
                         : ""
-                    } ${hasError ? "error" : ""}`}
+                    } ${hasError ? "error" : ""} ${gameWin ? "win" : ""}`}
                   >
                     {value !== 0 ? value : ""}
                   </div>

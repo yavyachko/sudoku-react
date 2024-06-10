@@ -141,3 +141,7 @@ h2{
   padding: 1vw;
   justify-content: center;
 }
+
+.field .win{
+  background-color: yellow;
+}
